@@ -22,8 +22,11 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - run:
+          name: "create workspace folder"
+          command: mkdir -p workspace
+      - run:
           name: "save data to output"
-          command: echo "text to output here" > output.txt
+          command: echo "text to output here" > workspace/output.txt
       - persist_to_workspace:
           root: workspace
           paths:
