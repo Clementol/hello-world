@@ -43,4 +43,6 @@ workflows:
       - print_world:
           requires:
             - print_hello
+  say-name-workflow:
+    jobs:
       - print_name
