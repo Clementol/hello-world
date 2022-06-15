@@ -25,14 +25,6 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - run:
-          name: Testing application
-          command: make test
-          shell: /bin/bash
-          working_directory: ~/my-app
-          no_output_timeout: 30m
-          environment:
-            FOO: bar
-      - run:
           name: return non-zero
           command: exit 1
       - run:
